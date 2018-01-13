@@ -1,0 +1,54 @@
+{
+   "style" : "default",
+   "config" : "save_摸鱼燃油机.dat",
+   "height" : 520,
+   "width" : 800,
+   "cancelscroll" : true,
+   "cancelname" : "取消",
+   "okname" : "开始摸鱼",
+	  "countdown":1,
+   "views" : [
+      {
+         "text" : "快速摸鱼",
+         "type" : "Page",
+         "views" : [
+            {
+               "height" : 300,
+               "width" : 700,
+               "id" : "group1",
+               "type" : "LinearLayout", 
+               "valign" : "top",
+               "views" : [
+                  {
+                     "align" : "left",
+                     "color" : "0,0,0",
+					  "width" : 200,
+                     "size" : 40,
+                     "text" : "C1摸鱼",
+                     "type" : "Label"
+                  },
+                  {
+                     "align" : "right",
+                     "src" : "mascot.png",
+                     "type" : "Image",
+                     "width" : 100
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "text" : "自定义摸鱼",
+         "type" : "Page",
+         "views" : [
+            {
+               "align" : "left",
+               "color" : "30,144,255",
+               "size" : 40,
+               "text" : "一揽子设定 TODO",
+               "type" : "Label"
+            }
+         ]
+      }
+   ]
+}
