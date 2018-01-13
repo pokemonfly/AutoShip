@@ -65,13 +65,20 @@ module['farmation'] = {
 module['win'] = {
 	name = '战斗结束',
 	route = {
-		['go'] = {1036,663,1334,762}
+		['go'] = {1155,660,1348,716}
 	},
 	check = function ()
-		local 	point = findColors({1340, 389, 1355, 404},
+		local 	pointA = findColors({1340, 389, 1355, 404},
 			"0|0|0xa56500,3|3|0xa56500,6|6|0xa56500,9|9|0xa56500",
 			95, 0, 0, 0)
-		return  #point ~= 0
+		local	pointB = findColors({541, 130, 901, 207}, 
+			"0|0|0xf7b673,11|25|0xffb252,39|27|0xffbe4a,83|27|0xf7d78c,103|9|0xffe38c,162|26|0xfffbe7,195|14|0xffef5a,246|27|0xffffe7,286|1|0xffba73",
+			80, 0, 0, 0)
+		local  pointC = findColors({23, 668, 102, 740}, 
+			"0|0|0x42d3e7,-1|-16|0xf7f7f7,19|-18|0xffffff,33|-19|0xefffff,44|4|0x42d3e7,44|17|0xcecfce,26|29|0xadaead,2|27|0xa5a2a5,-3|18|0xcecfce",
+			80, 0, 0, 0)
+		
+		return  #pointA ~= 0 or #pointB ~= 0 or #pointC ~= 0
 	end
 }
 module['fighting'] = {
