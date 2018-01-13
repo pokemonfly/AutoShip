@@ -111,11 +111,36 @@ battle.seekEnemy = function ()
 	local  arr = battle.findEnemy()
 	if #arr > 0 then 
 		local target  = battle:selectEnemy(arr)
+		battle.checkForm();
 		utils.click(target)
 	else 
 		utils.log ('未找到敌舰 - 切换')
-		utils.swip (1240,491,691,527)
+		battle.dragMap()
 	end
+end
+
+battle.dragMap = function() 
+	utils.swip(1240,491,691,527)
+end
+
+battle.checkForm = function ()
+	--单纵
+local point1 = findColors({329, 123, 347, 192}, 
+"0|0|0x00ebbd,0|10|0x00ebbd,0|20|0x08ebbd,1|30|0x00ebbd,1|42|0x00ebbd,1|52|0x00ebbd",
+80, 0, 0, 0)
+	--复纵
+	local  point2 = findColors({311, 123, 366, 183}, 
+		"0|0|0x08d7a5,20|-2|0x00ebbd,-1|18|0x08e3ad,19|16|0x00e3ad,-2|34|0x00ebbd,23|36|0x00ebbd",
+		80, 0, 0, 0)
+	if   #point1 > 0 then
+		utils.click (	1399,367,1428,417)
+		mSleep(300)
+		utils.click (	1243,372,1325,457)
+		mSleep(300)
+		utils.click (1182,380,1224,449)
+		mSleep(300)
+	end
+	
 end
 
 return battle

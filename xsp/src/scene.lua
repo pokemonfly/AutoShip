@@ -112,7 +112,7 @@ module['info'] = {
 }
 
 
-function isBattle ()
+function isBattle ()`
 	return findImg("battle.png", 87,0,244,54);
 end
 
