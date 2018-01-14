@@ -1,7 +1,6 @@
 local scene = require("scene")
 local action = require("action")
 local utils = require('utils')
-local var = require('var')
 local battle = require ("battle")
 local bb = require("badboy")
 
@@ -14,10 +13,10 @@ function main ()
 		       lua_exit();
 	end
 	
-	local curScene , sceneKey, nextScene
+	local curScene , sceneKey, nextSceneKey
 	local curAction = action['c1']
 	local dispatch = curAction.dispatch;
-	local clickArea
+	local status = { round = 0}
 	utils.setMsg ('摸鱼准备中')
 	while true do
 		-- 检查当前应用
@@ -26,12 +25,19 @@ function main ()
 			sceneKey ,curScene = utils.getCurrentScene()
 			if curScene then
 				utils.setMsg(curScene.name)
-				nextScene = dispatch[sceneKey]
+				nextSceneKey = dispatch[sceneKey]
 				if  curScene.route  then
-					utils.click(curScene .route [nextScene or 'go'])
+					utils.log( curScene.name  .. ' -> ' ..  (nextSceneKey or 'go'))
+					utils.click(curScene .route [nextSceneKey or 'go'])
+					if curScene.afterCallback then 
+						 local ret =  curScene.afterCallback (status)
+						 if ret then 
+						 utils.setMsg(curScene.name .. ' - ' ..ret)
+						 end 
+					end
 				else
 					if sceneKey == 'battleMap' then
-						battle.seekEnemy()
+						battle.seekEnemy(status)
 					end
 				end
 			 else

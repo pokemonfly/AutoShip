@@ -38,19 +38,30 @@ module['battleComfirm'] = {
 		return findImg ("battleComfirm.png", 928,496,1166,585);
 	end
 }
-module['shipComfirm'] = {
+module['fleetSelect'] = {
 	name = '舰队选择',
 	route = {
 		['go'] = {1034,601,1282,687}
 	},
 	check = function ()
 		return findImg ("shipComfirm.png", 104,99,360,184);
+	end,
+	afterCallback = function (opt)
+		if opt and opt.round then
+			--  出击次数
+			opt.round = 0
+		end 
 	end
 }
+-- 战斗网格地图
 module['battleMap'] = {
 	name = '出击中',
 	check = function ()
-		return findImg ("battleMap.png", 1180,707,1435,794);
+		--屏幕下方3色按钮
+		local ret=  findColor({733, 690, 1331, 796}, 
+			"0|0|0xc60000,251|-9|0x424142,498|-7|0xde7508,-150|-61|0x210c08",
+			80, 0, 0, 0)
+		return ret > -1
 	end
 }
 module['farmation'] = {
@@ -60,6 +71,13 @@ module['farmation'] = {
 	},
 	check = function ()
 		return findImg ("farmation.png", 87,3,245,56);
+	end,
+	afterCallback = function (opt)
+		if opt and opt.round then
+			--  出击次数
+			opt.round  = opt.round + 1
+			return opt.round
+		end 
 	end
 }
 module['win'] = {
@@ -102,7 +120,7 @@ module['ambush'] = {
 }
 module['info'] = {
 	name = '提示',
-	route = { ['go'] = {932,400,1123,458}},
+	route = { ['go'] = {814,528,952,577}},
 	check = function ()
 		local     point = findColors({517, 496, 872, 611},
 			"0|0|0xce9a21,20|15|0xf7d342,34|40|0xf7aa18,51|56|0xf7a210,77|56|0xf7a210,112|55|0xf7a210,149|54|0xf7a210,170|39|0xf7aa21,184|24|0xf7cb39,207|14|0x9c4908",
@@ -112,7 +130,7 @@ module['info'] = {
 }
 
 
-function isBattle ()`
+function isBattle ()
 	return findImg("battle.png", 87,0,244,54);
 end
 

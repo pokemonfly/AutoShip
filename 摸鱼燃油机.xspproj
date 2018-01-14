@@ -1,21 +1,21 @@
 [SOURCE]
 1\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/action.lua
 2\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/badboy.lua
-size=17
+size=16
 3\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/battle.lua
-4\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/config.json
-5\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/device.lua
-6\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/doc.md
-7\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/main.lua
-8\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/scene.lua
-9\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/utils.lua
-10\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/var.lua
-11\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/bblibs/JSON.lua
-12\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/bblibs/md5.lua
-13\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/bblibs/pos.lua
-14\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/bblibs/StrUtilsAPI.lua
-15\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/bblibs/UI.lua
-16\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/bblibs/utils.lua
+4\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/device.lua
+5\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/doc.md
+6\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/main.lua
+7\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/scene.lua
+8\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/utils.lua
+9\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/map.lua
+10\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/bblibs/JSON.lua
+11\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/bblibs/md5.lua
+12\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/bblibs/pos.lua
+13\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/bblibs/StrUtilsAPI.lua
+14\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/bblibs/UI.lua
+15\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/bblibs/utils.lua
+16\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/lib/inspect.lua
 17\SOURCEFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/lib/inspect.lua
 
 [UI]
@@ -24,8 +24,16 @@ size=1
 2\UIFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/src/config.json
 
 [RES]
-size=1
-1\RESFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/res/mascot.png
+size=9
+1\RESFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/res/battle.png
+2\RESFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/res/battleComfirm.png
+3\RESFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/res/cur.png
+4\RESFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/res/farmation.png
+5\RESFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/res/lv.png
+6\RESFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/res/mainPlus.png
+7\RESFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/res/mascot.png
+8\RESFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/res/shipComfirm.png
+9\RESFILE=C:/Users/pokemonfly/Documents/xspworkspace/\x6478\x9c7c\x71c3\x6cb9\x673a/xsp/res/target.png
 
 [LIB]
 size=0

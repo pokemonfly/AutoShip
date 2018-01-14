@@ -13,7 +13,7 @@ utils.log = function (...)
 	if #args == 1 then
 		args = args[1]
 	end
-	sysLog("[Debug Log] \n" .. ins(args))
+	sysLog("[Debug Log]" .. ins(args))
 end
 --[[
 utils.click({
